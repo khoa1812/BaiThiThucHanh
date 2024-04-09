@@ -14,12 +14,12 @@ public class StudentManager {
     public static void addNewStudent(Student student) {
         students.add(student);
         readWriteFile.writeFile(students);
-        System.out.println("Sản phẩm đã được thêm thành công.");
+        System.out.println("Sinh viên đã được thêm thành công.");
     }
 
     public static void displayStudents() {
         if (students.isEmpty()) {
-            System.out.println("Không có sản phẩm nào.");
+            System.out.println("Không có Sinh viên nào.");
             return;
         }
         for (Student student : students) {
@@ -38,9 +38,9 @@ public class StudentManager {
         if (studentToRemove != null) {
             students.remove(studentToRemove);
             readWriteFile.writeFile(students);
-            System.out.println("Sản phẩm đã được xóa.");
+            System.out.println("Sinh viên đã được xóa.");
         } else {
-            System.out.println("Không tìm thấy sản phẩm với mã: " + studentId);
+            System.out.println("Không tìm thấy sinh viên với mã: " + studentId);
         }
     }
 
@@ -56,9 +56,9 @@ public class StudentManager {
 
             students.set(studentIndex, updatedStudent);
             readWriteFile.writeFile(students);
-            System.out.println("Sản phẩm đã được cập nhật thành công.");
+            System.out.println("Sinh viên đã được cập nhật thành công.");
         } else {
-            System.out.println("Không tìm thấy sản phẩm với mã: " + studentId);
+            System.out.println("Không tìm thấy sinh viên với mã: " + studentId);
         }
     }
 
